@@ -1,0 +1,15 @@
+interface:
+  display_name: 产品发布叙事与讲解词
+  short_description: 从产品价值组织发布会故事、页面文案与中文口播，并校准时长
+  default_prompt: Use $craft-product-keynote-narrative to turn this feature brief
+    into a Chinese keynote story, slide copy, and speaker notes within the allotted
+    time.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true
