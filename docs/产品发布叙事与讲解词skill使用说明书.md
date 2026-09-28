@@ -22,9 +22,9 @@ flowchart TB
 
 | 阶段 | 谁来做 | 核心交付与格式 | 进入下一步的条件 |
 | --- | --- | --- | --- |
-| 01 产品设计 | 用户 Prompt 调用 `@Product Design`；涉及鸿蒙系统 UX 时应用 `@apply-harmonyos-ux-defaults` | `产品方案与UX流程.md`（待审批） | 问题、目标体验、关键状态和未确认项写清楚 |
+| 01 产品设计 | 用户 Prompt 调用 `@Product Design`；涉及鸿蒙系统 UX 时应用 [`@apply-harmonyos-ux-defaults`](https://github.com/lwyjames/harmonyos-ux-defaults) | `产品方案与UX流程.md`（待审批） | 问题、目标体验、关键状态和未确认项写清楚 |
 | 02 取舍与批准 | 用户审阅，助手据反馈修订同一文件 | `产品方案与UX流程.md`（批准版）；批准意见为对话文字 | 用户明确确认当前版本 |
-| 03–04 视觉稿（按需） | `@创建图像` 配合 `@apply-harmonyos-ux-defaults`；用户逐阶段反馈 | 黑白轻量预览稿、彩色轻量预览稿、按需原生尺寸版本，均为 PNG | 仅将用户确认的版本传给 A/B；不需要出图时从 02 直接分流 |
+| 03–04 视觉稿（按需） | `@创建图像` 配合 [`@apply-harmonyos-ux-defaults`](https://github.com/lwyjames/harmonyos-ux-defaults)；用户逐阶段反馈 | 黑白轻量预览稿、彩色轻量预览稿、按需原生尺寸版本，均为 PNG | 仅将用户确认的版本传给 A/B；不需要出图时从 02 直接分流 |
 | 05A–08A 发布会路径 | `@craft-product-keynote-narrative` → 用户审稿 → `@Presentations`／`@创建图像` → 用户验收 | `发布叙事.md`、`发布会幻灯片.pptx`、按需 PNG | 叙事明确获批后制作页面；页面验收后交给 10 |
 | 05B–09B 原型路径 | 用户提出原型要求 → `@Product Design` 制作 → 用户试用 → 修复打包 → 用户验收 | `可点击原型源码/`、`可点击原型_Windows离线.zip` | 主要点击路径通过；最终 ZIP 解压后检查 |
 | 10 汇总 | 用户要求助手整理 | `交付清单.md` | 只收录本次实际产生且状态准确的文件 |
@@ -54,7 +54,7 @@ flowchart TB
 | skill／调用名 | 类型 | 在本流程中的职责 | 典型输入 | 交付与边界 |
 | --- | --- | --- | --- | --- |
 | 产品设计 `@Product Design` | GPT 自带 skill | 定义体验和 UX 流程；在 B 路径制作、检查可点击原型 | 用户问题、批准的 UX、选定的视觉目标、状态与点击路径 | 01 的文字方案；06B 的网页预览与源码。制作原型时依其当前工作方式选择视觉目标并验证主要交互 |
-| 鸿蒙 UX 默认规范 `@apply-harmonyos-ux-defaults` | 个人 skill | 约束设备比例、机框、系统状态栏与导航条、通知、实况窗等适用细节 | 目标设备、系统表面、屏幕方向、批准参考图 | 与 Product Design、创建图像或原型制作共同使用；它是约束与核对依据，不单独代替产品方案或图片 |
+| 鸿蒙 UX 默认规范 [`@apply-harmonyos-ux-defaults`](https://github.com/lwyjames/harmonyos-ux-defaults) | 个人 skill | 约束设备比例、机框、系统状态栏与导航条、通知、实况窗等适用细节 | 目标设备、系统表面、屏幕方向、批准参考图 | 与 Product Design、创建图像或原型制作共同使用；它是约束与核对依据，不单独代替产品方案或图片 |
 | 创建图像 `@创建图像` | GPT 自带 skill | 生成或修改 UX 预览、发布会插画、按需导出 PNG | 已批准方案、参考图、目标阶段与画幅 | 03 的各阶段 PNG、07A 的发布图；图中文字、机框和关键组件仍需逐张核对 |
 | 产品发布叙事与讲解词 `@craft-product-keynote-narrative` | 个人 skill | 将批准体验和用户提供的发布要求转成页面主张、屏幕文案、演示动作、中文口播及时间安排 | `产品方案与UX流程.md`（批准版）、发布要求、按需获批 PNG | 同名 `发布叙事.md`；草稿、修订待确认、批准版在文件内标状态。只有用户明确批准当前修订才标“批准版” |
 | 演示文稿 `@Presentations` | GPT 自带 skill | 按已批准的叙事制作和修改幻灯片 | `发布叙事.md`（批准版）、批准素材、页面比例与风格 | `发布会幻灯片.pptx`；按需页面 PNG。页面需要审阅和返修 |
@@ -63,7 +63,7 @@ flowchart TB
 
 ### skill 的衔接规则
 
-1. `@Product Design` 先明确功能、状态和用户操作；`@apply-harmonyos-ux-defaults` 约束适用的系统 UX。用户批准后的 `产品方案与UX流程.md` 才是后续事实基线。
+1. `@Product Design` 先明确功能、状态和用户操作；[`@apply-harmonyos-ux-defaults`](https://github.com/lwyjames/harmonyos-ux-defaults) 约束适用的系统 UX。用户批准后的 `产品方案与UX流程.md` 才是后续事实基线。
 2. `@创建图像` 按需把基线做成视觉稿。黑白轻量预览稿用于看结构，彩色轻量预览稿用于看材质、层级和状态；用户需要高分辨率交付时才做原生尺寸版本。
 3. `@craft-product-keynote-narrative` 负责“讲什么、怎么讲、讲多久”，维护 `发布叙事.md`；`@Presentations` 负责把已批准的内容做成可放映页面。
 4. B 路径由 `@Product Design` 将批准的交互与选定视觉方案做成可点击原型。若没有获批视觉稿，可由 Product Design 先提供视觉方向供用户选定，再实施原型。
