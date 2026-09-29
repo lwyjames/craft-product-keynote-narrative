@@ -14,6 +14,6 @@
 - [references/timing-and-delivery.md](references/timing-and-delivery.md)：实测语速、演示时间与口播时长的校准方法。
 - [agents/openai.yaml](agents/openai.yaml)：技能在界面中的名称与描述。
 - [assets/icon.svg](assets/icon.svg)：技能图标。
-- [产品发布叙事与讲解词 skill 使用说明书](docs/产品发布叙事与讲解词skill使用说明书.md)：完整工作流、各 skill 分工、Prompt 示例与交付验收。
+- [产品发布叙事与讲解词 skill 使用说明书](docs/product-keynote-workflow-guide.md)：完整工作流、各 skill 分工、Prompt 示例与交付验收。
 
 此仓库是技能的公开源码副本。
